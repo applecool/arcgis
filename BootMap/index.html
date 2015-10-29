@@ -19,12 +19,7 @@
     <!-- Bootstrap-map-js -->
     <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.13/esri/css/esri.css">
     <link rel="stylesheet" type="text/css" href="src/css/bootstrapmap.css">
-    <style type="text/css">
-      #mapDiv {
-        min-height: 100%;
-        max-height: 100%;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="src/css/mapdiv.css">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -82,48 +77,7 @@
       };
     </script>
     <script src="//js.arcgis.com/3.13compact"></script>
-    <script>
-        require(["esri/map", "esri/dijit/Scalebar", "application/bootstrapmap", "dojo/domReady!"],
-          function(Map, Scalebar, BootstrapMap) {
-            // Get a reference to the ArcGIS Map class
-            var map = BootstrapMap.create("mapDiv", {
-              basemap: "national-geographic",
-              center: [-122.45, 37.77],
-              zoom: 12,
-              scrollWheelZoom: false
-            });
-
-            var scalebar = new Scalebar({
-              map: map,
-              scalebarUnit: "dual"
-            });
-
-           $(document).ready(function () {
-              $("#basemapList li").click(function (e) {
-                switch (e.target.text) {
-                  case "Streets":
-                    map.setBasemap("streets");
-                    break;
-                  case "Imagery":
-                    map.setBasemap("hybrid");
-                    break;
-                  case "National Geographic":
-                    map.setBasemap("national-geographic");
-                    break;
-                  case "Topographic":
-                    map.setBasemap("topo");
-                    break;
-                  case "Gray":
-                    map.setBasemap("gray");
-                    break;
-                  case "Open Street Map":
-                    map.setBasemap("osm");
-                    break;
-                }
-              });
-            });
-        });
-    </script>
+    <script src="src/js/index.js"></script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
