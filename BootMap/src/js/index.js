@@ -1,4 +1,3 @@
-
 require(["esri/map", "esri/dijit/Scalebar", "application/bootstrapmap", "dojo/domReady!"],
   function(Map, Scalebar, BootstrapMap) {
     // Get a reference to the ArcGIS Map class
@@ -14,8 +13,8 @@ require(["esri/map", "esri/dijit/Scalebar", "application/bootstrapmap", "dojo/do
       scalebarUnit: "dual"
     });
 
-   $(document).ready(function () {
-      $("#basemapList li").click(function (e) {
+    $(document).ready(function() {
+      $("#basemapList li").click(function(e) {
         switch (e.target.text) {
           case "Streets":
             map.setBasemap("streets");
@@ -38,4 +37,4 @@ require(["esri/map", "esri/dijit/Scalebar", "application/bootstrapmap", "dojo/do
         }
       });
     });
-});
+  });
